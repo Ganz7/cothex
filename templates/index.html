@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="{{ url_for('static', filename='js/jquery.masonry.min.js') }}"></script>
+	<script type="text/javascript">
+		$(function(){
+		  $('#container').masonry({
+		    itemSelector : '.item',
+		    columnWidth : 240,
+		    //columnWidth: function( containerWidth) { return containerWidth / 5;}
+		    isAnimated:true,
+		     animationOptions: {
+			    duration: 400
+			  }
+		  });
+		});
+	</script>
+</head>
+<body>
+	<div id="container">
+		{% for tweet in tweets["results"]: %}
+
+	 		<a href="{% print "http://www.twitter.com/",tweet['from_user'],"/statuses/",tweet['id']%}" target="_blank">
+	 		<div class="item">
+	 		<p class="item-text">{% print tweet["text"] %}</p></div>
+	 		</a>
+
+	  	{% endfor %}
+	</div>
+	
+
+
+</body>
+</html>
