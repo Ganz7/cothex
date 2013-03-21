@@ -1,0 +1,29 @@
+<html>
+<head>
+<script type="text/javascript">
+	function queryVal(f){
+		document.forms[f.name]["tQuery"].value = f.name
+		return true;
+	};
+</script>
+</head>
+
+<body>
+	<h1>Wazzza!</h1>
+	<p>
+		{% print valuee %}
+	</p>
+	<form name="I Think" action="logge" method="POST" onsubmit="return queryVal(this)">
+		<input type="hidden" name ="tQuery">
+		<input type="submit" value="I Think">
+	</form>
+	<form name="I Hope" action="logge" method="POST" onsubmit="return queryVal(this)">
+		<input type="hidden" name ="tQuery">
+		<input type="submit" value="I Hope">
+	</form>
+	<form name="I Wish" action="logge" method="POST" onsubmit="return queryVal(this)">
+		<input type="hidden" name ="tQuery">
+		<input type="submit" value="I Wish">
+	</form>
+</body>
+</html>

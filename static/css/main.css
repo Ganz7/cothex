@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Varela|Varela+Round);
 body{
 	text-align: center;
 	background-image:url('../img/fabric_plaid.png');
@@ -5,26 +6,37 @@ body{
 	width: auto;
 }
 #container{
-	width:80%;
-	z-index: 1;
-	float:left;
+	margin: 0 0;
+	width: auto;
+	overflow: hidden;
+	padding: 5%;
 }
-.banner{
-	width:20%;
-	height: 500px;
-	position: fixed;
+#banner{
+	margin: 0 0;
+	width: auto;
+	height:80px;
+	padding-right: 5%
+	padding-left: 5%
+	text-align: right;
+}
+.itemStatic {
+	width: 300px;
+	min-height: 400px;
+	margin: 15px;
+	float: left;
+	background-color: #EEE;
+	color: #444;
 	z-index: 1;
-	float:right;
-	background-color: #000;
-	color: #DDD;
+	text-align: center;
+
 }
 .item {
-	width: 220px;
+	width: 200px;
 	margin: 10px;
 	float: left;
 	background-color: #EEE;
 	color: #444;
-	z-index: 10;
+	z-index: 1;
 	text-align: left;
 
 
@@ -51,7 +63,7 @@ body{
 	background-color: #378EFF;
 }
 .item-text{
-	font-family: 'Sans';
+	font-family: 'Varela';
 	font-size: 15px;
 	padding: 10px;	
 }
@@ -60,12 +72,49 @@ body{
 	text-decoration: none;
 }
 .large{
-	font-family: 'Ubuntu';
+	font-family: 'Varela Round', sans-serif;
 	font-size: 40px;
+	text-align: right;
 	color: #AAA;
 }
+.medium{
+	font-family: 'Varela';
+	font-size: 30px;
+	text-align: left;
+	color: #BBB;
+}
 .small{
-	font-family: 'DejaVu Sans';
+	font-family: 'Varela';
 	font-size: 20px;
 	color: #999;
+}
+.styled-button {
+	background:#AAAAAA;
+	
+	padding:8px 13px;
+	color:#fff;
+	width:140px;
+	font-family:'Varela',sans-serif;
+	font-size:13px;
+	border: 1px;
+	border-color: #AAAAAA;
+	margin-bottom: 2px;
+	margin-top: 2px;
+
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+
+	transition:color 0.5s;
+	-moz-transition:color 0.5s; /* Firefox */
+	-webkit-transition:color 0.5s; /* Safari and Chrome */
+	-o-transition:color 0.5s; /* Opera */
+	transition:background-color 0.5s;
+	-moz-transition:background-color 0.5s; /* Firefox */
+	-webkit-transition:background-color 0.5s; /* Safari and Chrome */
+	-o-transition:background-color 0.5s; /* Opera */
+}
+.styled-button:hover{
+	color: #FFF;
+	background-color: #888888;
 }

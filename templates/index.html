@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Cothex | Ganz7</title>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script src="{{ url_for('static', filename='js/jquery.masonry.min.js') }}"></script>
@@ -17,20 +18,57 @@
 		  });
 		});
 	</script>
+	<script type="text/javascript">
+	function queryVal(f){
+		document.forms[f.name]["tQuery"].value = f.name
+		return true;
+	};
+</script>
 </head>
 <body>
+	<div id="banner">
+		<p class="large">The Collective Thought Experiment</p>
+		<p class="medium">{% print message %}</p>
+		
+	</div>
 	<div id="container">
-		{% for tweet in tweets["results"]: %}
+			<div class="item">
+			<div style = "text-align:center;">
+				<p class="small">Explore twitter!</p>
+				<p class="small">&#9400; 2013 Ganz7</p>
+				<form name="I Think" action="/" method="POST" onsubmit="return queryVal(this)">
+					<input type="hidden" name ="tQuery">
+					<input type="submit" value="I Think" class="styled-button">
+				</form>
+				<form name="I Hope" action="/" method="POST" onsubmit="return queryVal(this)">
+					<input type="hidden" name ="tQuery">
+					<input type="submit" value="I Hope" class="styled-button">
+				</form>
+				<form name="I Wish" action="/" method="POST" onsubmit="return queryVal(this)">
+					<input type="hidden" name ="tQuery">
+					<input type="submit" value="I Wish" class="styled-button">
+				</form>
+				<form name="I Dream" action="/" method="POST" onsubmit="return queryVal(this)">
+					<input type="hidden" name ="tQuery">
+					<input type="submit" value="I Dream" class="styled-button">
+				</form>
+				<form name="I Want" action="/" method="POST" onsubmit="return queryVal(this)">
+					<input type="hidden" name ="tQuery">
+					<input type="submit" value="I Want" class="styled-button">
+				</form>
+				<br/>
+			</div>
+			</div>
+			{% for tweet in tweets["results"]: %}
 
-	 		<a href="{% print "http://www.twitter.com/",tweet['from_user'],"/statuses/",tweet['id']%}" target="_blank">
-	 		<div class="item">
-	 		<p class="item-text">{% print tweet["text"] %}</p></div>
-	 		</a>
+		 		<a href="{% print "http://www.twitter.com/",tweet['from_user'],"/statuses/",tweet['id']%}" target="_blank">
+		 		<div class="item">
+		 		<p class="item-text">{% print tweet["text"] %}</p></div>
+		 		</a>
 
-	  	{% endfor %}
+		  	{% endfor %}
+		
 	</div>
 	
-
-
 </body>
 </html>
