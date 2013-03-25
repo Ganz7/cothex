@@ -3,8 +3,10 @@
 <head>
 	<title>Cothex | Ganz7</title>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+	<!-- For Deployment<link rel="stylesheet" type="text/css" href="/gan7/cothex/static/css/main.css">-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script src="{{ url_for('static', filename='js/jquery.masonry.min.js') }}"></script>
+	<!--<script src="/gan7/cothex/static/js/jquery.masonry.min.js"></script>-->
 	<script type="text/javascript">
 		$(function(){
 		  $('#container').masonry({
@@ -67,8 +69,12 @@
 		 		</a>
 
 		  	{% endfor %}
+
 		
 	</div>
+		<br/>
+		<hr class="grey"/>
+		 <p class="small" style="text-align:center">Form.Follows.Function.</p>
 	
 </body>
 </html>

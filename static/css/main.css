@@ -118,3 +118,11 @@ body{
 	color: #FFF;
 	background-color: #888888;
 }
+hr.grey{
+	background: #888;
+	height:1px;
+	border: none;
+	width:60%;
+	margin-left: 20%;
+	margin-right: 20%
+}
